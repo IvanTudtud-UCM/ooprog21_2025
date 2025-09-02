@@ -1,7 +1,7 @@
 public class Comments {
     public static void main(String[] args) {
         
-        // Single-line Comment: This prints a welcome message
+        // Single-line Comment: This meant for a short notes or explanation in codes
         System.out.println("Hello World");
         
         /* 
