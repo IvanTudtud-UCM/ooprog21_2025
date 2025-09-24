@@ -9,8 +9,8 @@ public class DebugPen {
    }
 
    public DebugPen(String color, String point) {
-      this.color = color;
-      this.point = point;
+      this.color = color; // set the instance variable to this.color 
+      this.point = point; // set the instance variable to this.point
    }
 
    public String getColor() {
