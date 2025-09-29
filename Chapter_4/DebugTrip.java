@@ -20,7 +20,8 @@ public class DebugTrip
 
     public DebugTrip(String destination, String departure)
     {
-        this(destination, departure, DEFAULT_MODE); // fixed constructor chaining
+        this.destination = destination; //fixed this(distination) to this.destination = destination
+        this.departure = departure; //fixed this(departure) to this.departure = departure
     }
 
     public DebugTrip(String destination, String departure, String mode)
