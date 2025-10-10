@@ -1,21 +1,24 @@
 public class Employee {
     private int employeeNumber;
     private double payRate;
-    private static final int MAX_EMPLOYEE_NUMBER = 9999;
-    private static final double MAX_RATE = 60.00;
-    private static final double OVERTIME_MULTIPLIER = 1.5;
+    private static final int maxEmpNum = 9999;
+    private static final double maxRate = 60.00;
+    private static final double otRate = 1.5;
 
     public Employee(int employeeNumber, double payRate) {
         
-        if (employeeNumber > MAX_EMPLOYEE_NUMBER)
-            this.employeeNumber = MAX_EMPLOYEE_NUMBER;
-        else
+        if (employeeNumber > maxEmpNum) {
+            this.employeeNumber = maxEmpNum;
+        }
+        else {
             this.employeeNumber = employeeNumber;
-
-        if (payRate > MAX_RATE)
-            this.payRate = MAX_RATE;
-        else
+        }
+        if (payRate > maxRate) {
+            this.payRate = maxRate;
+        }
+        else{
             this.payRate = payRate;
+        }
     }
 
     public double calculateRegularPay(double hoursWorked) {
@@ -25,6 +28,6 @@ public class Employee {
 
     public double calculateOvertimePay(double hoursWorked) {
         double overtimeHours = Math.max(0, hoursWorked - 40);
-        return overtimeHours * payRate * OVERTIME_MULTIPLIER;
+        return overtimeHours * payRate * otRate;
     }
 }
